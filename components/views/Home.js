@@ -1,6 +1,6 @@
 export default () => `
 <div class="banner-area">
-  <h2>What Your Next Project!</h2>
+  <h2>Whats Your Next Project!</h2>
 </div>
 <div class="content-area">
   <div class="wrapper">
@@ -16,8 +16,7 @@ export default () => `
     </div>
   </div>
 <section id="jumbotron">
-  <h2>Savvy Coders Jan. 2020 Cohort</h2>
-  <a href="">"Call to Action" "Button"</a>
+  <h2>Popular services Near You</h2>
 </section>
 <section id="jumbotron1">
   <h2>Savvy Coders Jan. 2020 Cohort</h2>

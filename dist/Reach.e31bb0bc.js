@@ -152,7 +152,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _default = function _default() {
-  return "\n<div class=\"banner-area\">\n  <h2>What Your Next Project!</h2>\n</div>\n<div class=\"content-area\">\n  <div class=\"wrapper\">\n    <h2>Discover Services</h2>\n    <form action=\"\" class=\"search-field\">\n    <div class=\"form-box\">\n    <div class=\"search-field\">\n      <input type=\"text\" placeholder=\"Service...\" name=\"Service\" class=\"search-field\" id=\"Service\">\n      <input type=\"text\" placeholder=\"Location\" name=\"Location\"  id=\"location\">\n      <search type=\"submit\" class=\"search-btn\">Submit</search>\n    </div>\n    </form>\n    </div>\n  </div>\n<section id=\"jumbotron\">\n  <h2>Savvy Coders Jan. 2020 Cohort</h2>\n  <a href=\"\">\"Call to Action\" \"Button\"</a>\n</section>\n<section id=\"jumbotron1\">\n  <h2>Savvy Coders Jan. 2020 Cohort</h2>\n  <a href=\"\">\"Call to Action\" \"Button\"</a>\n</section>\n";
+  return "\n<div class=\"banner-area\">\n  <h2>Whats Your Next Project!</h2>\n</div>\n<div class=\"content-area\">\n  <div class=\"wrapper\">\n    <h2>Discover Services</h2>\n    <form action=\"\" class=\"search-field\">\n    <div class=\"form-box\">\n    <div class=\"search-field\">\n      <input type=\"text\" placeholder=\"Service...\" name=\"Service\" class=\"search-field\" id=\"Service\">\n      <input type=\"text\" placeholder=\"Location\" name=\"Location\"  id=\"location\">\n      <search type=\"submit\" class=\"search-btn\">Submit</search>\n    </div>\n    </form>\n    </div>\n  </div>\n<section id=\"jumbotron\">\n  <h2>Popular services Near You</h2>\n</section>\n<section id=\"jumbotron1\">\n  <h2>Savvy Coders Jan. 2020 Cohort</h2>\n  <a href=\"\">\"Call to Action\" \"Button\"</a>\n</section>\n";
 };
 
 exports.default = _default;
@@ -340,7 +340,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _default = {
-  header: "Add A Photo",
   view: "Form"
 };
 exports.default = _default;
