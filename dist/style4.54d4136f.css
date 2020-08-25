@@ -187,6 +187,10 @@ form > * {
       align-items: center;
       height: 90vh;
     }
+    #jumbotron1 {
+      color: #fff;
+      text-align: center;
+    }
 
     #jumbotron > h2 {
       color: black;
@@ -219,13 +223,16 @@ form > * {
     }
 
     footer {
-      border-top: solid 1px black;
+      border-top: solid 0px black;
       padding: 2rem 2rem 4rem;
-      margin: 1rem 1rem;
-      position: ;
+      position: relative;
       clear: both;
       box-shadow: 0 0 25px 0 black;
       background: #262626;
+    }
+
+    footer{
+      color: #fff;
     }
 
 

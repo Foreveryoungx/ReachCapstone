@@ -19,7 +19,6 @@ export default () => `
   <h2>Popular services Near You</h2>
 </section>
 <section id="jumbotron1">
-  <h2>Savvy Coders Jan. 2020 Cohort</h2>
-  <a href="">"Call to Action" "Button"</a>
+  <h2>Services you might also like</h2>
 </section>
 `;
