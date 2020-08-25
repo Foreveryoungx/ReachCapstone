@@ -1,17 +1,13 @@
+import { Nav, Main, Footer } from "./components";
 
-import { Header, Nav, Main, Footer} from "./components";
-
-function render(){
+function render() {
   document.querySelector("#root").innerHTML = `
-  ${Header()}
   ${Nav()}
   ${Main()}
   ${Footer()}
-  `
+  `;
 }
 render();
-
-
 //function that obtains the info from the user's input in URL box
 // function obtainInfo(e){
 //   console.log(e)

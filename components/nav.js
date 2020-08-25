@@ -1,14 +1,18 @@
-export default () =>`
-<nav class="navbar">
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Contact</a>
-    <div class="search-container">
-      <form action="">
-        <input type="text" placeholder="Search.." name="search">
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
-    </div>
-  <a href="#" class="right">Home</a>
-</nav>
-`
+export default () => `
+<section id="nav-bar">
+     <header>
+       <div class="wrapper">
+         <div class="logo">
+           <a href="#">REACH</a>
+         </div>
+         <nav>
+           <a href="#">Home</a>
+           <a href="signUp.html">Sign Up</a>
+           <a href="#">Login</a>
+           <a href="#">Explore</a>
+           <a href="contact.html">Contact</a>
+         </nav>
+       </div>
+     </header>
+    </section>
+`;

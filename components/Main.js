@@ -1,35 +1,30 @@
 export default () => `
-    <div class="row">
-        <div class="leftcolumn">
-            <div class = "card">
-                <h2> TITLE HEADING</h2>
-                <h5> Title description, DEC 7, 2017</h5>
-                <div><img src="https://via.placeholder.com/350x150" alt="img here"></div>
-                <p>Some text..</p>
-            </div>
-            <div class = "card">
-                <h2> TITLE HEADING</h2>
-                <h5> Title description, DEC 7, 2017</h5>
-                <div><img src="https://via.placeholder.com/350x150" alt="img here"></div>
-                <p>Some text..</p>
-            </div>
-        </div>
-        <div class="rightcolumn">
-            <div class="card">
-                <h2>About Me</h2>
-                <div><img src="https://via.placeholder.com/350x150" alt="img here" height: 100px></div>
-                <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-            </div>
-            <div class="card">
-                <h3>popular Post</h3>
-                <div><img src="https://via.placeholder.com/350x150" alt="img here" height: 100px></div><br>
-                <div><img src="https://via.placeholder.com/350x150" alt="img here" height: 100px></div><br>
-                <div><img src="https://via.placeholder.com/350x150" alt="img here" height: 100px></div>
-            </div>
-            <div class="card">
-                <h3>Follow Me</h3>
-                <p>Some text..</p>
-            </div>
-        </div>
-    </div> `
-
+<div class="banner-area">
+  <h2>What Your Next Project!</h2>
+</div>
+<div class="content-area">
+  <div class="wrapper">
+    <h2>Discover Services</h2>
+    <form action="" class="search-field">
+    <div class="form-box">
+    <div class="search-field">
+      <input type="text" placeholder="Service..." name="Service" class="search-field" id="Service">
+      <input type="text" placeholder="Location" name="Location"  id="location">
+      <search type="submit" class="search-btn">Submit</search>
+    </div>
+    </form>
+    </div>
+  </div>
+  <div class="content-area">
+    <div class="wrapper">
+   <h1>Gardening</h1>
+   <p>this is the first jumbotron for search bar</p>
+   </div>
+  </div>
+   <div class="content-area">
+     <div class="wrapper">
+  <h1>Search Something</h1>
+  <p>this is the first jumbotron for search bar</p>
+  </div>
+</div>
+</section>`;
