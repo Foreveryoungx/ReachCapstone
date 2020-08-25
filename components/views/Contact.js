@@ -1,4 +1,4 @@
-export default () => {
+export default () =>
   `<div class="bg-img">
 <form name="myForm" class="Container" action="" onsubmit="return validForm()">
   <label for="fname">First Name</label>

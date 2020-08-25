@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"components/Main.js":[function(require,module,exports) {
+})({"components/Header.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -125,8 +125,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _default = function _default() {
-  return "\n<div class=\"banner-area\">\n  <h2>What Your Next Project!</h2>\n</div>\n<div class=\"content-area\">\n  <div class=\"wrapper\">\n    <h2>Discover Services</h2>\n    <form action=\"\" class=\"search-field\">\n    <div class=\"form-box\">\n    <div class=\"search-field\">\n      <input type=\"text\" placeholder=\"Service...\" name=\"Service\" class=\"search-field\" id=\"Service\">\n      <input type=\"text\" placeholder=\"Location\" name=\"Location\"  id=\"location\">\n      <search type=\"submit\" class=\"search-btn\">Submit</search>\n    </div>\n    </form>\n    </div>\n  </div>\n  <div class=\"content-area\">\n    <div class=\"wrapper\">\n   <h1>Gardening</h1>\n   <p>this is the first jumbotron for search bar</p>\n   </div>\n  </div>\n   <div class=\"content-area\">\n     <div class=\"wrapper\">\n  <h1>Search Something</h1>\n  <p>this is the first jumbotron for search bar</p>\n  </div>\n</div>\n</section>";
+var _default = function _default(st) {
+  return "\n<header>\n  <h1>REACH SPA ".concat(st.header, "</h1>\n</header>\n");
 };
 
 exports.default = _default;
@@ -138,12 +138,102 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _default = function _default() {
-  return "\n<section id=\"nav-bar\">\n     <header>\n       <div class=\"wrapper\">\n         <div class=\"logo\">\n           <a href=\"#\">REACH</a>\n         </div>\n         <nav>\n           <a href=\"#\">Home</a>\n           <a href=\"signUp.html\">Sign Up</a>\n           <a href=\"#\">Login</a>\n           <a href=\"#\">Explore</a>\n           <a href=\"contact.html\">Contact</a>\n         </nav>\n       </div>\n     </header>\n    </section>\n";
+var _default = function _default(links) {
+  return "\n<section id=\"nav-bar\">\n     <header>\n       <div class=\"wrapper\">\n         <div class=\"logo\">\n           <a href=\"#\">REACH</a>\n         </div>\n         <nav>\n           <a href=\"#\">Home</a>\n           <a href=\"#\">Sign Up</a>\n           <a href=\"#\">Login</a>\n           <a href=\"#\">Explore</a>\n           <a href=\"#\">Contact</a>\n         </nav>\n       </div>\n     </header>\n    </section>\n";
 };
 
 exports.default = _default;
-},{}],"components/Footer.js":[function(require,module,exports) {
+},{}],"components/views/Home.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _default = function _default() {
+  return "\n<div class=\"banner-area\">\n  <h2>What Your Next Project!</h2>\n</div>\n<div class=\"content-area\">\n  <div class=\"wrapper\">\n    <h2>Discover Services</h2>\n    <form action=\"\" class=\"search-field\">\n    <div class=\"form-box\">\n    <div class=\"search-field\">\n      <input type=\"text\" placeholder=\"Service...\" name=\"Service\" class=\"search-field\" id=\"Service\">\n      <input type=\"text\" placeholder=\"Location\" name=\"Location\"  id=\"location\">\n      <search type=\"submit\" class=\"search-btn\">Submit</search>\n    </div>\n    </form>\n    </div>\n  </div>\n<section id=\"jumbotron\">\n  <h2>Savvy Coders Jan. 2020 Cohort</h2>\n  <a href=\"\">\"Call to Action\" \"Button\"</a>\n</section>\n<section id=\"jumbotron1\">\n  <h2>Savvy Coders Jan. 2020 Cohort</h2>\n  <a href=\"\">\"Call to Action\" \"Button\"</a>\n</section>\n";
+};
+
+exports.default = _default;
+},{}],"components/views/Contact.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _default = function _default() {
+  return "<div class=\"bg-img\">\n<form name=\"myForm\" class=\"Container\" action=\"\" onsubmit=\"return validForm()\">\n  <label for=\"fname\">First Name</label>\n  <input type=\"text\" id=\"fname\"name=\"fname\" placeholder=\"Input First Name..\" autofocus required>\n\n  <label for=\"lname\">Last Name</label>\n  <input type=\"text\" id=\"lname\" name=\"lname\" placeholder=\"Input Last Name..\" required>\n\n  <label for=\"country\">Country</label>\n  <select name=\"country\" id=\"country\">\n  </select>\n\n  <label for=\"subject\">Comments</label>\n  <textarea id=\"subject\" name=\"subject\" placeholder=\"comments ..\" required maxlength=\"300\" minlength=\"1\"></textarea>\n  <input type=\"submit\" value=\"submit\">\n</form>";
+};
+
+exports.default = _default;
+},{}],"components/views/Form.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _default = function _default() {
+  return "<form action=\"\">\n  <div class=\"signupbox\">\n    <h1>SIGN UP</h1>\n    <p>Complete form to create an account.</p>\n\n    <label for=\"email\"><b>Email</b></label>\n    <input type=\"text\" placeholder=\"Enter Email\" name=\"email\" required>\n\n    <label for=\"psw\"><b>Password</b></label>\n    <input type=\"password\" placeholder=\"Enter Password\" name=\"psw\" required>\n\n    <label for=\"psw-repeat\"><b>Repeat Password</b></label>\n    <input type=\"password\" placeholder=\"Confirm Password\" name=\"psw-repeat\" required>\n\n    <label for=\"\">\n      <input type=\"checkbox\" checked=\"checked\" name=\"remember\" style=\"margin-bottom:15px\"> Remember me\n    </label>\n\n    <p>By creating an account you agree to our <a href=\"#\" style=\"color:dodgerblue\">Terms & Privacy</a>.</p>\n\n    <div class=\"clearfix\">\n      <button type=\"button\" class=\"cancelbtn\">Cancel</button>\n      <button type=\"submit\" class=\"signupbtn\">Sign Up</button>\n    </div>\n  </div>\n</form>";
+};
+
+exports.default = _default;
+},{}],"components/views/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "Home", {
+  enumerable: true,
+  get: function () {
+    return _Home.default;
+  }
+});
+Object.defineProperty(exports, "Contact", {
+  enumerable: true,
+  get: function () {
+    return _Contact.default;
+  }
+});
+Object.defineProperty(exports, "Form", {
+  enumerable: true,
+  get: function () {
+    return _Form.default;
+  }
+});
+
+var _Home = _interopRequireDefault(require("./Home"));
+
+var _Contact = _interopRequireDefault(require("./Contact"));
+
+var _Form = _interopRequireDefault(require("./Form"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./Home":"components/views/Home.js","./Contact":"components/views/Contact.js","./Form":"components/views/Form.js"}],"components/Main.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var views = _interopRequireWildcard(require("./views"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var _default = function _default(st) {
+  return "\n".concat(views[st.view](st));
+};
+
+exports.default = _default;
+},{"./views":"components/views/index.js"}],"components/Footer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -162,16 +252,22 @@ exports.default = _default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-Object.defineProperty(exports, "Main", {
+Object.defineProperty(exports, "Header", {
   enumerable: true,
   get: function () {
-    return _Main.default;
+    return _Header.default;
   }
 });
 Object.defineProperty(exports, "Nav", {
   enumerable: true,
   get: function () {
     return _Nav.default;
+  }
+});
+Object.defineProperty(exports, "Main", {
+  enumerable: true,
+  get: function () {
+    return _Main.default;
   }
 });
 Object.defineProperty(exports, "Footer", {
@@ -181,31 +277,160 @@ Object.defineProperty(exports, "Footer", {
   }
 });
 
-var _Main = _interopRequireDefault(require("./Main"));
+var _Header = _interopRequireDefault(require("./Header"));
 
 var _Nav = _interopRequireDefault(require("./Nav"));
+
+var _Main = _interopRequireDefault(require("./Main"));
 
 var _Footer = _interopRequireDefault(require("./Footer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./Main":"components/Main.js","./Nav":"components/Nav.js","./Footer":"components/Footer.js"}],"index.js":[function(require,module,exports) {
+},{"./Header":"components/Header.js","./Nav":"components/Nav.js","./Main":"components/Main.js","./Footer":"components/Footer.js"}],"store/Home.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  header: "Home",
+  view: "Home"
+};
+exports.default = _default;
+},{}],"store/Links.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = [{
+  title: "Home",
+  text: "Home"
+}, {
+  title: "Contact",
+  text: "Contact"
+}, {
+  title: "Blog",
+  text: "Blog"
+}, {
+  title: "Form",
+  text: "Submit A Photo"
+}];
+exports.default = _default;
+},{}],"store/Contact.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  header: "About Me",
+  view: "Bio",
+  paragraph: "Etiam egestas consectetur gravida. Nulla mollis suscipit sapien sed fermentum. Integer vitae eros a magna vulputate aliquam. Suspendisse sed pulvinar augue, auctor mollis lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis eleifend diam quis libero sollicitudin efficitur. Nullam sapien eros, tempor eget vulputate ut, interdum vel orci. Donec sit amet tempor mi. Nam feugiat cursus egestas. Suspendisse eget orci et ex mattis ornare tempor non tellus. Suspendisse gravida neque in urna congue bibendum. Duis dui odio, pharetra nec odio ac, ornare vulputate nibh."
+};
+exports.default = _default;
+},{}],"store/Form.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  header: "Add A Photo",
+  view: "Form"
+};
+exports.default = _default;
+},{}],"store/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "Home", {
+  enumerable: true,
+  get: function () {
+    return _Home.default;
+  }
+});
+Object.defineProperty(exports, "Links", {
+  enumerable: true,
+  get: function () {
+    return _Links.default;
+  }
+});
+Object.defineProperty(exports, "Contact", {
+  enumerable: true,
+  get: function () {
+    return _Contact.default;
+  }
+});
+Object.defineProperty(exports, "Form", {
+  enumerable: true,
+  get: function () {
+    return _Form.default;
+  }
+});
+
+var _Home = _interopRequireDefault(require("./Home"));
+
+var _Links = _interopRequireDefault(require("./Links"));
+
+var _Contact = _interopRequireDefault(require("./Contact"));
+
+var _Form = _interopRequireDefault(require("./Form"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./Home":"store/Home.js","./Links":"store/Links.js","./Contact":"store/Contact.js","./Form":"store/Form.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _components = require("./components");
 
-function render() {
-  document.querySelector("#root").innerHTML = "\n  ".concat((0, _components.Nav)(), "\n  ").concat((0, _components.Main)(), "\n  ").concat((0, _components.Footer)(), "\n  ");
+var state = _interopRequireWildcard(require("./store"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function render(st) {
+  document.querySelector("#root").innerHTML = "\n  ".concat((0, _components.Header)(st), "\n  ").concat((0, _components.Nav)(state.Links), "\n  ").concat((0, _components.Main)(st), "\n  ").concat((0, _components.Footer)(), "\n");
+  addNavEventListeners();
 }
 
-render(); //function that obtains the info from the user's input in URL box
-// function obtainInfo(e){
-//   console.log(e)
-//   e.preventDefault()
-//   let x = document.getElementById("userinput").value
-//       console.log(x);
-//       document.getElementById("URL").value = x;
-//   }
-},{"./components":"components/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+render(state.Home);
+
+function addNavEventListeners() {
+  // add menu toggle to bars icon in nav bar
+  document.querySelector(".fa-bars").addEventListener("click", function () {
+    return document.querySelector("nav > ul").classList.toggle("hidden--mobile");
+  });
+} // Contact Form Selection
+
+
+var myjson = {
+  country: ["United States", "Australia", "germany", "russia", "canada", "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "China", "Armenia", "Australia", "Austria", "Austrian Empire", "Azerbaijan"]
+};
+console.log(myjson); // for(let i = 0; i < country.json; i++){}
+
+var ele = document.getElementById("country");
+ele.innerHTML = "";
+myjson.country.forEach(function (i) {
+  ele.innerHTML += "<option>".concat(i, "</option>");
+});
+
+function validForm() {
+  var i = document.forms["myForm"]["fname"].value;
+
+  if (i === "") {
+    alert("Must input First Name");
+    return false;
+    preventdefault();
+  }
+}
+},{"./components":"components/index.js","./store":"store/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -233,7 +458,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62195" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57755" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

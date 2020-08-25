@@ -1,4 +1,4 @@
-export default () => `
+export default links => `
 <section id="nav-bar">
      <header>
        <div class="wrapper">
@@ -7,10 +7,10 @@ export default () => `
          </div>
          <nav>
            <a href="#">Home</a>
-           <a href="signUp.html">Sign Up</a>
+           <a href="#">Sign Up</a>
            <a href="#">Login</a>
            <a href="#">Explore</a>
-           <a href="contact.html">Contact</a>
+           <a href="#">Contact</a>
          </nav>
        </div>
      </header>
