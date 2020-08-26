@@ -6,11 +6,12 @@ export default links => `
            <a href="#">REACH</a>
          </div>
          <nav>
-           <a href="Home.js">Home</a>
-           <a href="SignUp.js">Sign Up</a>
-           <a href="#">Login</a>
-           <a href="#">Explore</a>
-           <a href="Contact.js">Contact</a>
+         ${links
+            .map(
+              link =>
+                `<a href="/${link.title}" data-navigo>${link.text}</a>`
+            )
+            .join("")}
          </nav>
        </div>
      </header>

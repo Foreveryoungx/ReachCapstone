@@ -1,0 +1,22 @@
+export default {
+  countries: [
+    "United States",
+    "Australia",
+    "Germany",
+    "Russia",
+    "Canada",
+    "Afghanistan",
+    "Albania",
+    "Algeria",
+    "Andorra",
+    "Angola",
+    "Antigua and Barbuda",
+    "Argentina",
+    "China",
+    "Armenia",
+    "Australia",
+    "Austria",
+    "Austrian Empire",
+    "Azerbaijan",
+  ],
+};
