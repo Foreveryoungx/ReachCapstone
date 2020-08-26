@@ -139,7 +139,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _default = function _default(links) {
-  return "\n<section id=\"nav-bar\">\n     <header>\n       <div class=\"wrapper\">\n         <div class=\"logo\">\n           <a href=\"#\">REACH</a>\n         </div>\n         <nav>\n           <a href=\"#\">Home</a>\n           <a href=\"#\">Sign Up</a>\n           <a href=\"#\">Login</a>\n           <a href=\"#\">Explore</a>\n           <a href=\"#\">Contact</a>\n         </nav>\n       </div>\n     </header>\n    </section>\n";
+  return "\n<section id=\"nav-bar\">\n     <header>\n       <div class=\"wrapper\">\n         <div class=\"logo\">\n           <a href=\"#\">REACH</a>\n         </div>\n         <nav>\n           <a href=\"Home.js\">Home</a>\n           <a href=\"SignUp.js\">Sign Up</a>\n           <a href=\"#\">Login</a>\n           <a href=\"#\">Explore</a>\n           <a href=\"Contact.js\">Contact</a>\n         </nav>\n       </div>\n     </header>\n    </section>\n";
 };
 
 exports.default = _default;
@@ -169,7 +169,7 @@ var _default = function _default() {
 };
 
 exports.default = _default;
-},{}],"components/views/Form.js":[function(require,module,exports) {
+},{}],"components/views/SignUp.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -179,6 +179,19 @@ exports.default = void 0;
 
 var _default = function _default() {
   return "<form action=\"\">\n  <div class=\"signupbox\">\n    <h1>SIGN UP</h1>\n    <p>Complete form to create an account.</p>\n\n    <label for=\"email\"><b>Email</b></label>\n    <input type=\"text\" placeholder=\"Enter Email\" name=\"email\" required>\n\n    <label for=\"psw\"><b>Password</b></label>\n    <input type=\"password\" placeholder=\"Enter Password\" name=\"psw\" required>\n\n    <label for=\"psw-repeat\"><b>Repeat Password</b></label>\n    <input type=\"password\" placeholder=\"Confirm Password\" name=\"psw-repeat\" required>\n\n    <label for=\"\">\n      <input type=\"checkbox\" checked=\"checked\" name=\"remember\" style=\"margin-bottom:15px\"> Remember me\n    </label>\n\n    <p>By creating an account you agree to our <a href=\"#\" style=\"color:dodgerblue\">Terms & Privacy</a>.</p>\n\n    <div class=\"clearfix\">\n      <button type=\"button\" class=\"cancelbtn\">Cancel</button>\n      <button type=\"submit\" class=\"signupbtn\">Sign Up</button>\n    </div>\n  </div>\n</form>";
+};
+
+exports.default = _default;
+},{}],"components/views/Explore.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _default = function _default() {
+  return "";
 };
 
 exports.default = _default;
@@ -200,10 +213,16 @@ Object.defineProperty(exports, "Contact", {
     return _Contact.default;
   }
 });
-Object.defineProperty(exports, "Form", {
+Object.defineProperty(exports, "SignUp", {
   enumerable: true,
   get: function () {
-    return _Form.default;
+    return _SignUp.default;
+  }
+});
+Object.defineProperty(exports, "Explore", {
+  enumerable: true,
+  get: function () {
+    return _Explore.default;
   }
 });
 
@@ -211,10 +230,12 @@ var _Home = _interopRequireDefault(require("./Home"));
 
 var _Contact = _interopRequireDefault(require("./Contact"));
 
-var _Form = _interopRequireDefault(require("./Form"));
+var _SignUp = _interopRequireDefault(require("./SignUp"));
+
+var _Explore = _interopRequireDefault(require("./Explore"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./Home":"components/views/Home.js","./Contact":"components/views/Contact.js","./Form":"components/views/Form.js"}],"components/Main.js":[function(require,module,exports) {
+},{"./Home":"components/views/Home.js","./Contact":"components/views/Contact.js","./SignUp":"components/views/SignUp.js","./Explore":"components/views/Explore.js"}],"components/Main.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -315,8 +336,8 @@ var _default = [{
   title: "Blog",
   text: "Blog"
 }, {
-  title: "Form",
-  text: "Submit A Photo"
+  title: "SignUp",
+  text: "SignUp"
 }];
 exports.default = _default;
 },{}],"store/Contact.js":[function(require,module,exports) {
@@ -332,7 +353,7 @@ var _default = {
   paragraph: "Etiam egestas consectetur gravida. Nulla mollis suscipit sapien sed fermentum. Integer vitae eros a magna vulputate aliquam. Suspendisse sed pulvinar augue, auctor mollis lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis eleifend diam quis libero sollicitudin efficitur. Nullam sapien eros, tempor eget vulputate ut, interdum vel orci. Donec sit amet tempor mi. Nam feugiat cursus egestas. Suspendisse eget orci et ex mattis ornare tempor non tellus. Suspendisse gravida neque in urna congue bibendum. Duis dui odio, pharetra nec odio ac, ornare vulputate nibh."
 };
 exports.default = _default;
-},{}],"store/Form.js":[function(require,module,exports) {
+},{}],"store/SignUp.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -340,7 +361,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _default = {
-  view: "Form"
+  view: "SignUp"
 };
 exports.default = _default;
 },{}],"store/index.js":[function(require,module,exports) {
@@ -367,10 +388,10 @@ Object.defineProperty(exports, "Contact", {
     return _Contact.default;
   }
 });
-Object.defineProperty(exports, "Form", {
+Object.defineProperty(exports, "SignUp", {
   enumerable: true,
   get: function () {
-    return _Form.default;
+    return _SignUp.default;
   }
 });
 
@@ -380,10 +401,10 @@ var _Links = _interopRequireDefault(require("./Links"));
 
 var _Contact = _interopRequireDefault(require("./Contact"));
 
-var _Form = _interopRequireDefault(require("./Form"));
+var _SignUp = _interopRequireDefault(require("./SignUp"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./Home":"store/Home.js","./Links":"store/Links.js","./Contact":"store/Contact.js","./Form":"store/Form.js"}],"index.js":[function(require,module,exports) {
+},{"./Home":"store/Home.js","./Links":"store/Links.js","./Contact":"store/Contact.js","./SignUp":"store/SignUp.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _components = require("./components");
