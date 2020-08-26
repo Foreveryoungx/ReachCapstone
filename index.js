@@ -1,5 +1,16 @@
 import { Header, Nav, Main, Footer } from "./components";
 import * as state from "./store";
+import Navigo from "navigo";
+
+const router = new Navigo(window.location.origin);
+router
+  .on(":page", handleRoute)
+  .on("/", () => render(state.Home))
+  .resolve();
+function handleRoute(params) {
+  const page = params.page;
+  render(state[page], page);
+}
 
 function render(st) {
   document.querySelector("#root").innerHTML = `
@@ -47,14 +58,14 @@ let myjson = {
 };
 console.log(myjson);
 // for(let i = 0; i < country.json; i++){}
-var ele = document.getElementById("country");
+let ele = document.getElementById("country");
 ele.innerHTML = "";
 myjson.country.forEach(i => {
   ele.innerHTML += `<option>${i}</option>`;
 });
 
 function validForm() {
-  var i = document.forms["myForm"]["fname"].value;
+  let i = document.forms["myForm"]["fname"].value;
   if (i === "") {
     alert("Must input First Name");
     return false;
