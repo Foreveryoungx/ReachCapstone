@@ -1,6 +1,6 @@
 export default () =>
-  `<div class="bg-img">
-<form name="myForm" class="Container" action="" onsubmit="return validForm()">
+  `<div class="container">
+<form name="myForm" class="Container" action=""https://gformspree.io/xnqgyege" method="POST" onsubmit="return validForm()">
   <label for="fname">First Name</label>
   <input type="text" id="fname"name="fname" placeholder="Input First Name.." autofocus required>
 
@@ -12,6 +12,6 @@ export default () =>
   </select>
 
   <label for="subject">Comments</label>
-  <textarea id="subject" name="subject" placeholder="comments .." required maxlength="300" minlength="1"></textarea>
-  <input type="submit" value="submit">
+  <textarea id="subject" name="subject" placeholder="Comments .." required maxlength="300" minlength="1"></textarea>
+  <input type="submit" value="Submit">
 </form>`;

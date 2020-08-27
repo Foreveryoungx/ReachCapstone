@@ -1,4 +1,4 @@
-import { Header, Nav, Main, Footer } from "./components";
+import { Nav, Header, Main } from "./components";
 import * as state from "./store";
 import Navigo from "navigo";
 
@@ -17,58 +17,58 @@ function render(st) {
   ${Header(st)}
   ${Nav(state.Links)}
   ${Main(st)}
-  ${Footer()}
 `;
-  addNavEventListeners();
+
+  if (st.view === "Contact") {
+    console.log(state.formData);
+    addCountries(state.formData.countries);
+  }
+  //addNavEventListeners();
 }
 
-render(state.Home);
-
-function addNavEventListeners() {
-  // add menu toggle to bars icon in nav bar
-  document
-    .querySelector(".fa-bars")
-    .addEventListener("click", () =>
-      document.querySelector("nav > ul").classList.toggle("hidden--mobile")
-    );
-}
+// function addNavEventListeners() {
+//   // add menu toggle to bars icon in nav bar
+//   document
+//     .querySelector(".fa-bars")
+//     .addEventListener("click", () =>
+//       document.querySelector("nav > ul").classList.toggle("hidden--mobile")
+//     );
+// }
 
 // Contact Form Selection
-let myjson = {
-  country: [
-    "United States",
-    "Australia",
-    "germany",
-    "russia",
-    "canada",
-    "Afghanistan",
-    "Albania",
-    "Algeria",
-    "Andorra",
-    "Angola",
-    "Antigua and Barbuda",
-    "Argentina",
-    "China",
-    "Armenia",
-    "Australia",
-    "Austria",
-    "Austrian Empire",
-    "Azerbaijan"
-  ]
-};
-console.log(myjson);
-// for(let i = 0; i < country.json; i++){}
-let ele = document.getElementById("country");
-ele.innerHTML = "";
-myjson.country.forEach(i => {
-  ele.innerHTML += `<option>${i}</option>`;
-});
+
+function addCountries(countries) {
+  // for(let i = 0; i < country.json; i++){}
+  const ele = document.getElementById("country");
+  ele.innerHTML = "";
+  countries.forEach(country => {
+    ele.innerHTML += `<option>${country}</option>`;
+  });
+}
 
 function validForm() {
-  let i = document.forms["myForm"]["fname"].value;
-  if (i === "") {
+  const Sl = document.forms["myForm"]["fname"].value;
+  if (Sl === "") {
     alert("Must input First Name");
     return false;
     preventdefault();
   }
+}
+
+// Slide show Function
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let Sl;
+  let slides = document.getElementsByClassName("mySlides");
+  for (Sl = 0; Sl < slides.length; Sl++) {
+    slides[Sl].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 4000); // Change image every 4 seconds
 }

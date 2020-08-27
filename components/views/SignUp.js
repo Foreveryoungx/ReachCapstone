@@ -1,6 +1,8 @@
 export default () =>
-  `<form action="">
-  <div class="signupbox">
+  `<form action="https://formspree.io/xnqgyege"
+  method="POST" class="modal-content">
+  <div class="modal">
+  <div class="container1" id="signup">
     <h1>SIGN UP</h1>
     <p>Complete form to create an account.</p>
 
@@ -23,5 +25,6 @@ export default () =>
       <button type="button" class="cancelbtn">Cancel</button>
       <button type="submit" class="signupbtn">Sign Up</button>
     </div>
+  </div>
   </div>
 </form>`;
