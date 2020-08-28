@@ -55,7 +55,7 @@ nav a:hover{
   height:600px;
   position: fixed;
   top: 100px;
-  background-image: url(https://p1.pxfuel.com/preview/784/512/884/night-mountains-city-snow.jpg);
+  background-image: url(https://github.com/Foreveryoungx/ReachCapstone/blob/master/Images/city_at_night.preview.jpg?raw=true);
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;
@@ -74,7 +74,7 @@ nav a:hover{
   top: 450px;
   background:;
   height: 500px;
-  background-image: linear-gradient(rgba(0,0,0,0.5)), url(images/city_at_night.preview.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.5)), url(https://github.com/Foreveryoungx/ReachCapstone/blob/master/Images/city_at_night.preview.jpg?raw=true);
 
 
 }
