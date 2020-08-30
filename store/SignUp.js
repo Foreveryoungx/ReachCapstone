@@ -1,4 +1,3 @@
 export default {
-  header: "Home",
-  view: "SignUp",
+  view: "SignUp"
 };

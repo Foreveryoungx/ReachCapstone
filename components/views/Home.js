@@ -3,7 +3,7 @@ const nameOfImageAsAVariable1 = require("../../Images/img_mountains_wide.jpg");
 const nameOfImageAsAVariable2 = require("../../Images/img_snow_wide.jpg");
 export default () => `
 <div class="banner-area">
-  <h2>Whats Your Next Project!</h2>
+  <h2>What's Your Next Project?</h2>
 </div>
 <div class="content-area">
   <div class="wrapper">
@@ -54,6 +54,7 @@ export default () => `
 </section>
 <section id="jumbotron1">
   <h2>Services you might also like</h2>
+  <a href="/Contactcard" data-naviago >Contact</a>
 </section>
   </div>
 `;

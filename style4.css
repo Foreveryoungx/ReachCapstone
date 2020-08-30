@@ -10,7 +10,7 @@ body{
   width:1170px;
   margin: 0 auto;
 }
-header{
+#nav-bar > header{
   height: 100px;
   background: #262626;
   width: 100%;
@@ -75,8 +75,6 @@ nav a:hover{
   background:;
   height: 500px;
   background-image: linear-gradient(rgba(0,0,0,0.5)), url(https://github.com/Foreveryoungx/ReachCapstone/blob/master/Images/city_at_night.preview.jpg?raw=true);
-
-
 }
 .content-area h2{
   font-family: bignoodletitling;
@@ -108,12 +106,7 @@ nav a:hover{
   padding:70px 30px;
 }
 
-{
-  margin: 0;
-  padding: 0 0 20px;
-  text-align: center;
-  font-size: 22px;
-}
+
 
 .loginbox p{
   margin: 0;
@@ -135,7 +128,6 @@ nav a:hover{
   height: 40px;
   color: #fff;
   font-size: 16px;
-  box-shadow: 0 0 25px 0 black;
 }
 
 .loginbox input[type="submit"]
@@ -166,7 +158,7 @@ nav a:hover{
   color: #ffc107;
 }
 
-    /* jumbotron Carousel*/
+    /************ 1st jumbotron and  Carousel******************/
     #jumbotron {
       background-size: cover;
       display: flex;
@@ -175,6 +167,17 @@ nav a:hover{
       align-items: center;
       height: 90vh;
       background-color: #262626;
+    }
+    #jumbotron > a {
+      text-decoration: none;
+      background-color: white;
+      font-size: 1.5em;
+      padding: 1.5rem;
+      border-radius: 10px;
+    }
+    #jumbotron > h2 {
+      color: white;
+      text-align: center;
     }
     #jumbotron > div.slideshow-container > a.prev{
       left: 0;
@@ -190,7 +193,6 @@ nav a:hover{
       font-family: Verdana,sans-serif;
       margin: 0;
     }
-
     #jumbotron > div.slideshow-container .myslides{
       display: none;
     }
@@ -199,7 +201,6 @@ nav a:hover{
       position: relative;
       margin: auto;
     }
-
     #jumbotron > div.slideshow-container a.prev, a.next{
       cursor: pointer;
       position: absolute;
@@ -224,7 +225,6 @@ nav a:hover{
     #jumbotron > div.slideshow-container .prev:hover, .next:hover{
       background-color: rgba(0,0,0,0.8);
     }
-
     #jumbotron .text{
         color: #f2f2f2;
         font-size: 15px;
@@ -268,8 +268,10 @@ nav a:hover{
       animation-name: fade;
       animation-duration: 1.5s;
     }
+    /********** End of jumbotron Carosuel ************/
 
-    #jumbotron1 {
+    /*************** Creation of 2nd Jumbotron ********************/
+      #jumbotron1 {
       background: url(https://p1.pxfuel.com/preview/784/512/884/night-mountains-city-snow.jpg) center center no-repeat;
       background-size: cover;
       display: flex;
@@ -282,37 +284,20 @@ nav a:hover{
       color: #fff;
       text-align: center;
     }
-
-
-
-    #jumbotron > h2 {
-      color: white;
-      text-align: center;
-    }
-
-    #jumbotron > a {
-      text-decoration: none;
-      background-color: white;
-      font-size: 1.5em;
-      padding: 1.5rem;
-      border-radius: 10px;
-    }
-
     form {
       display: flex;
       flex-direction: column;
     }
-
     form > * {
       margin: .5rem;
     }
-
     form > input[type=submit] {
       width: 40%;
       margin: .5rem;
       margin-right: auto;
     }
-/* Footer */
+
+/**************** Footer if needed work in progress ******************/
     footer {
       border-top: solid 0px black;
       padding: 2rem 2rem 4rem;
@@ -324,12 +309,11 @@ nav a:hover{
       box-shadow: 0 0 25px 0 black;
       background: #262626;
     }
-
     footer{
       color: #fff;
     }
-
-/* search Bar */
+/********** end of Footer ************/
+/*************** search Bar *************/
 .search-field{
   height: 50px;
   padding: 10px;
@@ -359,7 +343,9 @@ nav a:hover{
   background: rgba(0,0,0,0.5);
   padding: 30px;
 }
-/* Contact Form */
+/**************** end of search bar ******************/
+
+/***************** Contact Form **********************/
 #root > div > form input[type=text], select, textarea{
   width:100%;
   padding:11px;
@@ -382,7 +368,6 @@ nav a:hover{
 #root > div > form > label:nth-child(7) {
   color: #f2f2f2;
 }
-
 #root > div > form input[type=submit] {
   background-color: #ffeb3b;
   padding: 12px 20px;
@@ -399,37 +384,34 @@ nav a:hover{
 .container {
   border-radius: 6px;
   background-color:#f2f2f2;
-  background-image:url(https://p1.pxfuel.com/preview/784/512/884/night-mountains-city-snow.jpg);
+  background:linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));;
   background-size: cover;
   padding: 400px;
   text-align: left;
   border: 1px solid black;
 }
-
 .container1 {
   border-radius: 5px;
   background-color:#f2f2f2;
-  background-image:url(https://p1.pxfuel.com/preview/784/512/884/night-mountains-city-snow.jpg);
-  background-size: cover;
+  background:linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
   padding: 400px;
   text-align: left;
   border: 1px solid black;
 }
-/* sign Up */
+/************** End of contact form ***********/
+
+/************** sign Up ******************/
 #signup input[type=text], input[type=password]{
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
-  background: #f1f1f1;
-
 }
 #signup input[type=text]:focus, input[type=password]:focus{
   background-color: #ddd;
   outline: none;
 }
-
 #signup button{
   background-color: #4CAF50;
   color: white;
@@ -462,7 +444,6 @@ nav a:hover{
   float: left;
   width: 50%;
 }
-
 .modal {
 position: fixed;
 z-index: 1;
@@ -475,19 +456,16 @@ overflow: auto;
 background-color: #474e5d;
 padding-top: 5px 5px 5px;
 }
-
 .modal-content {
   background-color: #fefefe;
   border: 1px solid #888;
   width: 80%;
 }
-
 @media screen and (max-width: 300px) {
   .cancelbtn, .signupbtn {
      width: 100%;
   }
 }
-
 #signup > p:nth-child(2) {
   color: #f1f1f1;
   padding: 2%;
@@ -519,4 +497,163 @@ padding-top: 5px 5px 5px;
 
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
+}
+/********* end of signup page ************/
+
+/****** Signup Page ********/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+div#root{
+ background:
+ linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+}
+form#msform{
+  width: 400px;
+  margin: auto;
+  padding-top:300px;
+  padding-bottom: 500px;
+}
+#msform fieldset{
+  background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+
+	/*stacking fieldsets above each other*/
+	position: relative;
+}
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
+/*inputs*/
+#msform input,#msform textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
+#msform > fieldset:nth-child(2) > input[type="password"]:nth-child(4){
+  padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px green;
+}
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+#progressbar li {
+	list-style-type: none;
+	color: white;
+	text-transform: uppercase;
+	font-size: 9px;
+	width: 33.33%;
+	float: left;
+	position: relative;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 10px;
+	color: #333;
+	background: white;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none;
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+	background: #27AE60;
+	color: white;
+}
+
+/********** style Contact Card ***********/
+.card {
+  box-shadow: 0 4px 8px 0 rgbba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  margin-bottom: 0px;
+  text-align: center;
+  padding-top: 300px;
+  padding-bottom: 500px;
+}
+.title {
+  color: grey;
+  font-size: 18px;
+}
+#root > div > p:nth-child(8) > button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+#root > div > a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+/******** End Style Contact Card *********/
+
+#root > div > img {
+  width: 100%;
 }

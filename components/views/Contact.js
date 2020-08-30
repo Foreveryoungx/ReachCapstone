@@ -1,6 +1,7 @@
 export default () =>
   `<div class="container">
-<form name="myForm" class="Container" action=""https://gformspree.io/xnqgyege" method="POST" onsubmit="return validForm()">
+<form name="myForm" class="Container" action="" method="POST" onsubmit="return validForm()" id="msform">
+<fieldset>
   <label for="fname">First Name</label>
   <input type="text" id="fname"name="fname" placeholder="Input First Name.." autofocus required>
 
@@ -14,4 +15,5 @@ export default () =>
   <label for="subject">Comments</label>
   <textarea id="subject" name="subject" placeholder="Comments .." required maxlength="300" minlength="1"></textarea>
   <input type="submit" value="Submit">
+</fieldset>
 </form>`;
