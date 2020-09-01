@@ -91,14 +91,11 @@ function createContactCardListners() {
     e.preventDefault();
     console.log("Im on tv mom!!");
     state.Contactcard.fname = document.querySelector("#fname").value;
-    console.log(state.Contactcard.fname);
     state.Contactcard.lname = document.querySelector("#lname").value;
-    console.log(state.Contactcard.lname);
     state.Contactcard.email = document.querySelector("#email").value;
-    console.log(state.Contactcard.email);
-    console.log(state.Contactcard);
-    //state.Rolodex.push(Object.assign({}, state.Contactcard));
-    createFirebaseUser(state.Contactcard.email, "passWord");
+    state.Contactcard
+      //state.Rolodex.push(Object.assign({}, state.Contactcard));
+      .createFirebaseUser(state.Contactcard.email, "passWord");
     addUserToDatabase(
       state.Contactcard.fname,
       state.Contactcard.lname,

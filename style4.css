@@ -396,7 +396,7 @@ nav a:hover{
   border-radius: 5px;
   background-color:#f2f2f2;
   background:linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
-  padding: 400px;
+  padding: 200px;
   text-align: left;
   border: 1px solid black;
 }

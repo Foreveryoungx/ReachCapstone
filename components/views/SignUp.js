@@ -10,6 +10,9 @@ export default () =>
       <input type="text" name="lname" id="lname" placeholder="Last Name" />
       <label for="email"><b>Email</b></label>
       <input type="text" placeholder="Enter Email" name="email" id="email" required>
+      <input type="text" name="twitter" placeholder="Twitter"/>
+      <input type="text" name="facebook" placeholder="Facebook" />
+      <input type="text" name="gplus" placeholder="Google Plus" />
 
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>

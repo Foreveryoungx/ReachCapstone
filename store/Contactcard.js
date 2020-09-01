@@ -3,5 +3,8 @@ export default {
   fname: "",
   lname: "",
   email: "",
+  twitter: "",
+  Facebook: "",
+
   arr: []
 };
