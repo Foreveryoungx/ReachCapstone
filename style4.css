@@ -6,6 +6,7 @@
 body{
   text-align:center;
 }
+/******************* Nav-Bar Style********************/
 .wrapper{
   width:1170px;
   margin: 0 auto;
@@ -165,7 +166,7 @@ nav a:hover{
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 90vh;
+      height: 60vh;
       background-color: #262626;
     }
     #jumbotron > a {
@@ -268,6 +269,7 @@ nav a:hover{
       animation-name: fade;
       animation-duration: 1.5s;
     }
+    @media ()
     /********** End of jumbotron Carosuel ************/
 
     /*************** Creation of 2nd Jumbotron ********************/
@@ -343,9 +345,9 @@ nav a:hover{
   background: rgba(0,0,0,0.5);
   padding: 30px;
 }
-/**************** end of search bar ******************/
+/**************** end of search bar **********************************/
 
-/***************** Contact Form **********************/
+/***************** Contact Form **************************************/
 #root > div > form input[type=text], select, textarea{
   width:100%;
   padding:11px;
@@ -461,11 +463,11 @@ padding-top: 5px 5px 5px;
   border: 1px solid #888;
   width: 80%;
 }
-@media screen and (max-width: 300px) {
+/* @media screen and (max-width: 300px) {
   .cancelbtn, .signupbtn {
      width: 100%;
   }
-}
+} */
 #signup > p:nth-child(2) {
   color: #f1f1f1;
   padding: 2%;
@@ -495,9 +497,9 @@ padding-top: 5px 5px 5px;
   margin: auto;
 }
 
-@media only screen and (max-width: 300px) {
+/* @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
-}
+} */
 /********* end of signup page ************/
 
 /****** Signup Page ********/
@@ -509,8 +511,8 @@ div#root{
 form#msform{
   width: 400px;
   margin: auto;
-  padding-top:300px;
-  padding-bottom: 500px;
+  padding-top:0px;
+  padding-bottom: 0px;
 }
 #msform fieldset{
   background: white;
@@ -618,7 +620,7 @@ form#msform{
 
 /********** style Contact Card ***********/
 .card {
-  box-shadow: 0 4px 8px 0 rgbba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
   margin: auto;
   margin-bottom: 0px;

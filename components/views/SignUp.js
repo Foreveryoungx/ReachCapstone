@@ -25,6 +25,7 @@ export default () =>
 
       <div class="clearfix">
       <a href="/Home" data-naviago ><button type="button" class="cancelbtn">Cancel</button></a>
+
         <button type="submit" class="signupbtn">Sign Up</button>
       </div>
       </fieldset>

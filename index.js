@@ -1,40 +1,46 @@
+// ********************** Imports ********************/
 import { Nav, Main } from "./components";
 import * as state from "./store";
 import Navigo from "navigo";
+import * as firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
+import { firebaseConfig } from "./firebase_config";
+
+//************************Router Fxn*******************/
 
 const router = new Navigo(window.location.origin);
+firebase.initializeApp(firebaseConfig);
 router
   .on(":page", handleRoute)
   .on("/", () => render(state.Home))
   .resolve();
+
+//*********************Render Fxn********************/
+
 function handleRoute(params) {
+  console.log(params);
   const page = params.page;
-  render(state[page], page);
+  render(state[page], state);
 }
 
 function render(st) {
   document.querySelector("#root").innerHTML = `
   ${Nav(state.Links)}
-  ${Main(st)}
+  ${Main(st, state)}
 `;
 
   if (st.view === "Contact") {
     console.log(state.formData);
     addCountries(state.formData.countries);
   }
-  //addNavEventListeners();
+
+  if (st.view === "SignUp") {
+    createContactCardListners();
+  }
 }
 
-// function addNavEventListeners() {
-//   // add menu toggle to bars icon in nav bar
-//   document
-//     .querySelector(".fa-bars")
-//     .addEventListener("click", () =>
-//       document.querySelector("nav > ul").classList.toggle("hidden--mobile")
-//     );
-// }
-
-// ******************Contact Form Selection
+// ******************Contact Form Selection******************/
 function addCountries(countries) {
   // for(let i = 0; i < country.json; i++){}
   const ele = document.getElementById("country");
@@ -43,16 +49,21 @@ function addCountries(countries) {
     ele.innerHTML += `<option>${country}</option>`;
   });
 }
-function validForm() {
-  const Sl = document.forms["myForm"]["fname"].value;
-  if (Sl === "") {
-    alert("Must input First Name");
-    return false;
-    preventdefault();
-  }
-}
+// function validForm() {
+//   const fN = document.forms["myForm"]["fname"].value;
+//   const lN = document.forms["myForm"]["lname"].value;
+//   if (fN === "") {
+//     alert("Must input First Name");
+//     return false;
+//     preventdefault();
+//   }
+//   if (lN === "") {
+//     alert("Must input Last Name ");
+//     return false;
+//   }
+// }
 
-// ****************************Slide show Function
+// ****************************Slide show Function**********/
 let slideIndex = 0;
 showSlides();
 // ********* Carousel Slides
@@ -70,117 +81,55 @@ function showSlides() {
   setTimeout(showSlides, 4000); // Change image every 4 seconds
 }
 
-// *********** Registration form
-let current_fs, next_fs, previous_fs; //fieldsets
-let left, opacity, scale; //fieldset properties which we will animate
-let animating; //flag to prevent quick multi-click glitches
-
-$(".next").click(function() {
-  if (animating) return false;
-  animating = true;
-
-  current_fs = $(this).parent();
-  next_fs = $(this)
-    .parent()
-    .next();
-
-  //activate next step on progressbar using the index of next_fs
-  $("#progressbar li")
-    .eq($("fieldset").index(next_fs))
-    .addClass("active");
-  //show the next fieldset
-  next_fs.show();
-  //hide the current fieldset with style
-  current_fs.animate(
-    { opacity: 0 },
-    {
-      step: function(now, mx) {
-        //as the opacity of current_fs reduces to 0 - stored in "now"
-        //1. scale current_fs down to 80%
-        scale = 1 - (1 - now) * 0.2;
-        //2. bring next_fs from the right(50%)
-        left = now * 50 + "%";
-        //3. increase opacity of next_fs to 1 as it moves in
-        opacity = 1 - now;
-        current_fs.css({
-          transform: "scale(" + scale + ")",
-          position: "absolute"
-        });
-        next_fs.css({ left: left, opacity: opacity });
-      },
-      duration: 800,
-      complete: function() {
-        current_fs.hide();
-        animating = false;
-      },
-      //this comes from the custom easing plugin
-      easing: "easeInOutBack"
-    }
-  );
-});
-
-$(".previous").click(function() {
-  if (animating) return false;
-  animating = true;
-
-  current_fs = $(this).parent();
-  previous_fs = $(this)
-    .parent()
-    .prev();
-
-  //de-activate current step on progressbar
-  $("#progressbar li")
-    .eq($("fieldset").index(current_fs))
-    .removeClass("active");
-
-  //show the previous fieldset
-  previous_fs.show();
-  //hide the current fieldset with style
-  current_fs.animate(
-    { opacity: 0 },
-    {
-      step: function(now, mx) {
-        //as the opacity of current_fs reduces to 0 - stored in "now"
-        //1. scale previous_fs from 80% to 100%
-        scale = 0.8 + (1 - now) * 0.2;
-        //2. take current_fs to the right(50%) - from 0%
-        left = (1 - now) * 50 + "%";
-        //3. increase opacity of previous_fs to 1 as it moves in
-        opacity = 1 - now;
-        current_fs.css({ left: left });
-        previous_fs.css({
-          transform: "scale(" + scale + ")",
-          opacity: opacity
-        });
-      },
-      duration: 800,
-      complete: function() {
-        current_fs.hide();
-        animating = false;
-      },
-      //this comes from the custom easing plugin
-      easing: "easeInOutBack"
-    }
-  );
-});
-
-$(".submit").click(function() {
-  return false;
-});
-
 // ******** Contact Card Creation
 const makeConCard = document.querySelector(".signupbtn");
 //****** grabbing info from signup form
-createAContactCard();
-function createAContactCard() {
-  makeConCard.addEventListener("click", e => {
+//createAContactCard();
+
+function createContactCardListners() {
+  document.querySelector(".signupbtn").addEventListener("click", e => {
     e.preventDefault();
+    console.log("Im on tv mom!!");
     state.Contactcard.fname = document.querySelector("#fname").value;
     console.log(state.Contactcard.fname);
     state.Contactcard.lname = document.querySelector("#lname").value;
-    console.log(lname);
+    console.log(state.Contactcard.lname);
     state.Contactcard.email = document.querySelector("#email").value;
-    console.log(email);
+    console.log(state.Contactcard.email);
+    console.log(state.Contactcard);
+    //state.Rolodex.push(Object.assign({}, state.Contactcard));
+    createFirebaseUser(state.Contactcard.email, "passWord");
+    addUserToDatabase(
+      state.Contactcard.fname,
+      state.Contactcard.lname,
+      state.Contactcard.email
+    );
+    router.navigate("/Contactcard");
   });
-  render(state.Contactcard);
+}
+//****************Create Firebase User ***************/
+function createFirebaseUser(username, password) {
+  firebase
+    .auth()
+    .createUserWithEmailAndPassword(username, password)
+    .then(value => {
+      console.log("value");
+    });
+}
+// *******************Add User To Database *************/
+function addUserToDatabase(fname, lname, email) {
+  firebase
+    .firestore()
+    .collection("users")
+    .add({ fname: fname, lname: lname, email: email });
+}
+render(state.Home);
+
+//********************Get Most recent Users******************/
+const database = firebase.database();
+function getMostRecentUsers(userId, fname, lname, email) {
+  firebase
+    .database()
+    .ref("users" + userId)
+    .set({ fname, lname, email });
 }
